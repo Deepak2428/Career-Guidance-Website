@@ -1,0 +1,620 @@
+html
+{
+    scroll-behavior: smooth;
+}
+html,body
+{
+    margin: 0%;
+    width: 100%;
+    overflow-x:hidden;
+}
+hr
+{
+    width:10%;
+    border: dotted 15px grey;
+    border-bottom: 0;
+    margin: auto;
+    color:white;
+}
+hr.no 
+{
+    width:90%;
+    border: none;
+    background-color:black;
+}
+p.dull
+{
+    font-size:15px;
+}
+button{
+    display: block;
+    margin-top:3%;
+}
+.nav
+{
+    
+    display: inline-block;
+    width: 100%;
+    color:white;
+    background-color: black;
+}
+.navlist
+{
+    list-style: none;
+    margin-bottom: 0;
+}
+.navlist li
+{
+    margin:2px;
+}
+.navlist img
+{
+    height:70px;
+    width:70px;
+    
+}
+.navleft
+{
+    float: left;
+    padding:15px;
+
+}
+.navright
+{
+    padding:20px;
+    position: relative;
+    top:15px;
+    right:5px;
+    float:right;
+}
+.nav a,#dropdown a{
+    color:white;
+    text-decoration: none;
+}
+.nav a::after
+{
+    content:"";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width:0;
+    height:2px;
+    background-color:rgb(0, 0, 0);
+    
+}
+.nav a:hover::after
+{
+    background-color: blue;
+    width: 100%;
+    transition: .3s;
+}
+.nav a:active
+{
+    width:100%;
+    background-color: blue;
+}
+#dropdown
+{
+    margin-top: 0%;
+    padding:20px;
+    color: white;
+    background-color: black;
+    float: right;
+    top: 0%;
+}
+.dropbtn
+{
+    color: white;
+    background-color: black;
+}
+
+/************* row one  ************/
+h1
+{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 50px;
+}
+h2,h3
+{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 70px;
+}
+.one
+{
+    margin-top: 12%;
+}
+.one h1,.one h2,.uldesc
+{
+    text-align: left;
+    margin-left: 8%;
+    line-height: 50px;
+}
+#first
+{
+    font-weight: lighter,;
+}
+.explorebutton
+{
+   
+    width:150px;
+    margin-left: 12%;
+    border-radius: 50px;
+}
+.one img
+{
+    animation: fadeInRight 1s ease-in-out;
+}
+@keyframes fadeInRight
+{
+    from{
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 780px) {
+
+    .oneinner li,.one h1,.one h2,.uldesc
+    {
+        text-align: center;
+    }
+    .one ul
+    {
+        margin-top: 3%;
+        list-style: none;
+    }
+    .explorebutton
+    {
+        margin:auto;
+        margin-top: 3%;
+    }
+}
+/**********  row two *************/
+.two
+{
+    margin-top: 13%;
+}
+.two p
+{
+    line-height: 40px;
+    margin-right: 4%;
+}
+.two img{
+    animation: fadeInLeft 1s ease-in-out;
+}
+@keyframes fadeInLeft
+{
+    from{
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/***************** row three***********/
+
+.three
+{
+    margin-top: 10%;;
+}
+
+
+/************* row four **********/
+.four
+{
+    margin-top: 10%;
+}
+.fourcol
+{
+    text-align: center;
+}
+.fourcoldata
+{
+    text-align: center;
+    padding: 30px;;
+}
+.fourcol img
+{
+    height:350px;
+    width:450px;
+}
+/************** row five ************/
+.five
+{
+    margin-top: 10%;
+}
+.fivecol
+{
+    text-align: center;
+}
+.fivecoldata
+{
+    text-align: center;
+}
+
+
+/****************** row six  *********/
+
+.six
+{
+    margin-top: 10%;
+}
+.six .sixcoldata
+{
+    text-align: center;
+}
+
+.six .sixcol
+{
+    text-align: left;
+}
+.six .sixcol img
+{
+    margin-top: 3%;
+}
+
+/**************** row seven ***********/
+.seven
+{
+    margin-top: 8%;
+    text-align: center;
+    width: 100%;
+}
+.seven img.logo
+{
+    margin: auto;
+    margin-top: 3%;
+    height: 250px;
+    width:250px;
+} 
+.sevenone
+{
+    margin-top: 3%;
+}
+.partner
+{
+    text-align: center;
+}
+.celeb{
+    position: relative;
+    top:-80px;
+}
+.celebration
+{
+    height:300px;
+    width:400px;
+    position: absolute;
+    left:35%;
+}
+button.celeb-btn
+{
+    display:block;
+    margin:auto;
+    padding:8px 30px 8px 30px;
+}
+
+/*********** carusol*******/
+.carousel
+{
+    margin-top: 3%;
+    background-color: #E8F9FD;
+    text-align: center;
+    padding:10px;
+}
+.carousel-item
+{
+    text-align: center;
+}
+
+.carousel .cont
+{
+    width:60%;
+    margin: auto;
+    margin-top: 2%;
+}
+.carousel .cont img
+{
+    margin-top: 3%;
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+}
+.carousel-control-prev-icon,.carousel-control-next-icon
+{
+    background-color:black;
+    border-radius: 50%;;
+}
+
+
+/************ row eight*************/
+.tempclassforcolor
+{
+    background-color: #fdfdfd;
+    background-image: url(./images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: bottom;
+    padding-bottom: 20px;
+}
+.eight
+{
+    margin-top: 5%;
+    text-align: center;
+}
+.science,.commerce,.arts
+{
+    padding: 10px;
+}
+ul.science,ul.commerce,ul.arts
+{
+    list-style: none;
+    text-align: center;
+}
+ul.science li,ul.commerce li,ul.arts li
+{
+    margin-top:10px;
+}
+
+div.commerce,div.arts,div.science,div.sale,.private-college,.govt-college
+{
+    box-sizing: border-box;
+    border: 2px solid grey;
+    border-radius: 8px;
+    box-shadow:  -1px -4px 8px 1px grey;
+
+}
+div.science:hover,div.commerce:hover,div.arts:hover,div.sale:hover,.private-college:hover,.govt-college:hover
+{
+    box-shadow:  -1px -4px 16px 3px grey;
+    transition: ease-in-out 0.4s;
+}
+div.science button,div.commerce button, div.arts button
+{
+    margin-bottom: 3%;
+}
+div.social
+{
+    animation: fadeInLeft 2s ease-in-out;
+    background-color: antiquewhite;
+    padding:5px;
+    border-radius: 10px;
+    position: fixed;
+    top:50%;
+    left:0%;
+}
+ul.social
+{
+    list-style: none;
+    padding: 0;
+    font-size: 40px;
+}
+a.social
+{
+    text-decoration: none;
+    color:black;
+}
+ul.social li:hover
+{
+    font-size:45px;
+    transition: ease-in-out 0.2s;
+}
+
+/********** footer***********/
+.footer
+{
+    background-color: rgb(20, 20, 20);
+    margin-top: 8%;
+}
+.footer img
+{
+    height:400px;
+    width:400px;
+}
+.footer p.contact
+{
+    margin-top: 30%;
+    color:white
+}
+.footer p
+{
+    color:white;
+}
+/******************************************** Login page*******************************/
+.loginpage
+{
+    margin-top: 3%;
+}
+
+.loginimg
+{
+    text-align: right;
+}
+.loginimg img
+{
+    height:500px;
+    width:550px;
+}
+.loginlogoimg img
+{
+    height:100px;
+    width:100px;
+}
+.loginlogoimg
+{
+    text-align: left;
+    margin-top: 1%;
+}
+.loginlogoimg p
+{
+    display: inline-block;
+}
+
+.loginlogoimg input
+{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+.loginlogoimg input:focus
+{
+   outline: none;
+}
+#passvisible
+{
+    display: inline;
+    border:0px;
+    background-color:white;
+}
+.loginbtn
+{
+    padding:5px 20px;
+    display: block;
+    margin-left:12%;
+}
+.loginlogoimg img.google,.loginlogoimg img.facebook
+{
+    height:30px;
+    width:30px;
+}
+.googfb
+{
+    margin-left: 8%;
+}
+a.signup
+{
+    color: black;
+    text-decoration: none;
+    margin-left: 5%;
+}
+.modal
+{
+    text-align: center;
+}
+.modal button,.modal input
+{
+    padding:10px;
+    margin: auto;
+    margin-top: 3%;
+    width:70%;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.loginlogoimg a.forgotpass
+{
+    text-decoration: none;
+    color: black;
+}
+p.forgotpass
+{
+    margin-left: 5%;
+    font-size: 15px;
+}
+
+/*************************************** class 11 college ***********************************/
+.one-eleven,.one-college
+{
+    margin-top: 2%;
+}
+.one-eleven img
+{
+    height: 450px;
+    width: 450px;
+    position: fixed;
+    right: 10%;
+    z-index: -2;
+}
+.one-eleven-coldata,.one-college-coldata
+{
+    margin-top: 5%;
+    text-align: left;
+}
+.one-eleven-colimg,.one-college-colimg
+{
+    margin-top: 3%;
+    text-align: center;
+}
+.one-eleven h1,.one-eleven h2,.one-eleven ul,.one-college h1,.one-college h2,.one-college ul
+{
+    margin-left: 5%;
+}
+.eleven-z-index,.college-z-index
+{
+    margin-top: 10%;
+    background-color: white;
+}
+.eleven ,.college
+{
+    margin-top: 3%;
+    text-align: center;
+    
+}
+.eleven-coldata,.college-coldata
+{
+    text-align: center;
+    padding:30px;
+}
+.eleven-colimg,.college-colimg
+{
+    text-align: center;
+}
+.eleven-colimg img,.college-colimg img
+{
+    height:550px;
+    width:500px;
+}
+img.arts
+{
+    height:550px;
+}
+.cbse,.icse
+{
+    text-align: left;
+    list-style:upper-roman;
+}
+.cbse li,.icse li
+{
+    line-height: 35px;
+}
+.icseimg
+{
+    height:250px;
+    width:350px;
+}
+.eleven-saleimg,.college-img
+{
+    height:150px;
+    width:95%;
+    margin-top: 5%;
+    border-radius: 15px;
+}
+.sale-one
+{
+    margin-left: 4%;
+}
+.one-college img
+{
+    height:400px;
+    width:450px;
+    position: fixed;
+    right: 10%;
+    z-index: -2;
+}
+.iframe
+{
+    
+    height:350px;
+    width:500px;
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 30px;
+}
+.private-college
+{
+    padding-bottom: 10px;
+}

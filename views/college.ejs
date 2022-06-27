@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Launcher- college Admission</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat:ital,wght@0,100;0,400;1,200&family=Open+Sans:wght@300&family=Sacramento&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="./logo/Career launcher-logos (1).ico">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4576693741.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="nav">
+        <ul class="navlist">
+            <li class="navleft"><img src="/logo/Career launcher-logos_white.png"></li>
+            <li class="navleft"><h1><em>Career Launcher</em></h1></li>
+            <% if(username==undefined){%>
+                <li class="navright"><a href="Login.ejs">Login/Sign Up</a></li>
+            <%} else {%>
+                <li class="navright"><button class="dropbtn" onclick="dropdown()"><i class="fa fa-light fa-user"></i></button></li>
+            <%}%>
+            <li class="navright"><a href="index.ejs">Home</a></li>
+        </ul>
+    </div>
+    <div id="dropdown" style="display: none;">
+        <ul class="navlist">
+            <li><%=username%></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+    <div class="row one-college">
+        <div class="col-lg-8 col-md-8 col-sm-12 one-college-coldata">
+            <h1>Stepping into a new phase of your Life.🤩</h1>
+            <h2>But confused Where to go.</h2>
+            <h2><strong>Dont worry ! You're not alone.🚀</strong></h2>
+            <h2><Strong>Why Career guidance for college ?</Strong></h2>
+            <ul>
+                <li class="lead">Trend to follow the crowd.</li>
+                <li class="lead">Parental Pressure / Social Pressure</li>
+                <li class="lead">Lack of knowledge</li>
+                <li class="lead">Understand job requirements</li>
+            </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 one-college-coldata">
+            <img src="./images/college-page.jpg" class="one-college-colimg">
+        </div>
+    </div>
+    <div class="college-z-index">
+        <div class="row college">
+            <h2><strong>Let's see What all options you have 🔎</strong></h2>
+        </div>
+        <div class="row college" id="eng">
+            <h1 style="background-color:#F1EEE9;padding:80px;font-size: 50px;"><strong>Engineering 👷‍♂️</strong></h1>
+        </div>
+        <div class="row college">
+            <div class="col-lg-7 col-md-7 col-sm-12 college-coldata">
+                <h3><strong></strong></h3>
+                <p class="lead">
+                    An engineer is a technical professional. He or she is responsible for supervision of designing,
+                    manufacturing as well as the building processes and other technical staff. 
+                    An engineer researches, designs and develops equipment, devices and other components of a machine,
+                    building or even a software. During one’s career as engineer, 
+                    he or she works with other engineers for successful completion of the project.
+                </p>
+                <p class="lead"><strong>The engineer has been, and is, a maker of history.</strong></p>
+                <p class="lead"><strong>~ James Kip Finch</strong></p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 college-colimg">
+                <img src="./images/engineering.png">
+            </div>
+        </div>
+        <div class="row college">
+            <h3><strong>Why Engineering ?</strong></h3>
+            <br><br>
+            <iframe class="iframe"src="https://www.youtube.com/embed/zoHm5AXeYYQ"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture" ></iframe>
+        </div>
+        <div class="row college">
+            <h2><strong>Hmm... Opting for Engineering. But which one ?</strong></h2>
+        </div>
+        <div class="row college">
+            <div class="col-lg-7 col-md-7 col-sm-12 college-coldata">
+                <h3><strong>Computer Science Engineering</strong></h3>
+                <p class="lead">
+                    Computer Science Engineering (CSE) is an engineering discipline that covers several topics 
+                    related to computation, programming languages, program design, computer hardware and software
+                    and integrates several fields of computer science. It is one of the trending subjects which 
+                    students pursue after completing Class 12. CSE is a four-year undergraduate course which 
+                    involves various aspects needed for the creation of a computer system.
+                </p>
+                <h3><Strong>Career in C.S.E </Strong></h3>
+                <p class="lead">
+                    Career options in CSE include software developers, hardware engineers, system designers,
+                    system analysts, database administrators and more. One must have analytical and programming skills, 
+                    basic knowledge of web design, ideas of machine learning and algorithms to pursue a CSE course.
+                    One can land in some top It companies like Google, Facebook, Amazon ,Apple with dream Package.
+                </p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 college-colimg">
+                <img src="./images/cse.gif">
+            </div>
+        </div>
+        <br><br><hr><br>
+        <div class="row college">
+            <div class="col-lg-5 col-md-5 col-sm-12 college-colimg">
+                <img src="./images/electrical.gif">
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 college-coldata">
+                <h3><strong>Electrical Engineering</strong></h3>
+                <p class="lead">
+                    Electrical engineering is an engineering discipline concerned with the study, design, 
+                    and application of equipment, devices, and systems which use electricity, electronics, 
+                    and electromagnetism. It emerged as an identifiable occupation in the latter half of the 
+                    19th century after commercialization of the electric telegraph, the telephone, and electrical 
+                    power generation, distribution, and use
+                </p>
+                <h3><strong>Career in Electrical Engineering</strong></h3>
+                <p class="lead">
+                    Career options in EEE are design engineer, project engineer, chief engineer, field engineer, systems design engineer, quality control engineer, 
+                    design engineer, test engineer and others.
+                    EEE engineers not only deal with power generation and transmission systems but they also have to analyse and develop electrical equipment, 
+                    electronic devices and control systems.
+                </p>
+            </div>
+        </div>
+        <br><br><hr><br>
+        <div class="row college">
+            <div class="col-lg-7 col-md-7 col-sm-12 college-coldata">
+                <h3><strong>Electronics and Communication Engineering</strong></h3>
+                <p class="lead">
+                    Electronics and Communications Engineering (ECE) involves researching, designing, developing, 
+                    and testing electronic equipment used in various systems. Electronics and Communications engineers 
+                    also conceptualize and oversee the manufacturing of communications and broadcast systems. This 
+                    stream of engineering deals with analog transmission, basic electronics, microprocessors, 
+                    solid-state devices, digital and analog communication, analog integrated circuits, microwave 
+                    engineering, satellite communication, antennae, and wave progression.
+                </p>
+                <h3><strong>Career in Electronics and Communication Engineering</strong></h3>
+                <p class="lead">
+                    The students of Electronics and Communication Engineering can create an exciting career in Consumer 
+                    Electronics Manufacturing Organisation, Health Care Equipment Manufacturing, Telecommunication and IT,
+                     Mobile Communication Internet Technologies, Power Electronics, and various other industries 
+                     including steel, petroleum, and chemical, etc. The ECE graduates also have opportunities in the 
+                     Government and private sectors in the areas such as design, manufacture, operation, installation, 
+                     and maintenance of electronics equipment. With the advent of the latest technologies, new 
+                     opportunities came into existence such as self-driving cars, robotics, autonomous drone logistics, 
+                     automation in industries, etc.
+                </p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 college-colimg">
+                <img src="./images/electronics.webp" style="margin-top: 15%;">
+            </div>
+        </div>
+        <br><br><hr><br>
+
+        <div class="row college">
+            <div class="col-lg-5 col-md-5 col-sm-12 college-colimg">
+                <img src="./images/mechanical.png" style="margin-top: 15%;">
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 college-coldata">
+                <h3><strong>Mechanical Engineering</strong></h3>
+                <p class="lead">
+                    Mechanical engineering is the study, design, development, construction, and testing of mechanical and thermal 
+                    sensors and devices, including tools, engines, and machines. Mechanical engineering careers 
+                    center on creating technologies to meet a wide range of human needs.
+                </p>
+                <p class="lead">
+                    Mechanical engineering subjects include automobile engineering, manufacturing engineering, 
+                    power plant engineering, thermal engineering, and mechatronics engineering, which is a 
+                    combination of electrical, computer, and mechanical engineering.
+                </p>
+                <h3><strong>Career in Mechanical Engineering</strong></h3>
+                <p class="lead">
+                    Mechanical engineers in India are in high demand due to the rapid industrialisation of the nation. 
+                    Job prospects for skilled mechanical engineers are limitless in India and abroad. 
+                    Students are actively recruited by private and public sectors in various industries. 
+                    Gone are the days when Mechanical Engineers were restricted to manufacturing units. 
+                    Now with additional qualifications, they can hold senior positions in managerial and 
+                    administrative fields.
+                </p>
+            </div>
+        </div>
+
+        <div class="row college">
+            <div class="col-lg-7 col-md-7 col-sm-12 college-coldata">
+                <h3><strong>Civil Engineering</strong></h3>
+                <p class="lead">
+                    Civil engineering is the professional practice of designing and developing infrastructure projects. 
+                    This can be on a huge scale, such as the development of nationwide transport systems or water supply 
+                    networks, or on a smaller scale, such as the development of individual roads or buildings.
+                </p>
+                <p class="lead">
+                    The great thing about civil engineering in the real world is that it’s an industry that perpetually 
+                    adapts to the demands and desires of society. In recent years civil engineering has adapted to 
+                    consider many contemporary environmental concerns, helping to address issues of pollution and scarce 
+                    water supplies, while considering the potential of sustainable energy within the industry.
+                </p>
+                <h3><strong>Career in Civil Engineering</strong></h3>
+                <p class="lead">
+                    With civil Engineering degree in the pocket one can be a Construction Manager, Geotechnical Engineer,
+                    Environmental Engineer,public health Engineer, Transportation Engineer. The median salary of a civil
+                    Engineer is $55,000 to $83,000 per year. Is'nt it lucrative.
+                </p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 college-colimg">
+                <img src="./images/civil.gif" style="margin-top: 15%;">
+            </div>
+        </div>
+        <br><br><hr><br>
+        <div class="row college">
+            <h2><strong>Decided Stream. Next step choosing the University .🏨</strong></h2>
+        </div>
+        <div class="row college">
+            <div class="col-lg-1 col-md-1"></div>
+            <div class="col-lg-4 col-md-4 col-sm-8 govt-college">
+                <img src="./images/govt-college.webp" class="college-img">
+                <h3><strong>Government Universities</strong></h3>
+                <hr class="no">
+                <br>
+                <p class="lead">
+                    Unlike Government Schools Government Colleges are first choice of every Engineering
+                    Student. The reasons are low fees which reduces burden on Parents.
+                </p>
+                <p class="lead">
+                    All Government Universities are AICTE approved.
+                </p>
+                <p class="lead">
+                    Government Universities faculty is highly trained and experienced.
+                </p>
+                <p class="lead">
+                    Government Universities provide exposure to students.
+                </p>
+                <button class="btn btn-outline-primary"style="width:40%;" onclick="window.open('https://engineering.careers360.com/colleges/list-of-government-engineering-colleges-in-india','_blank');">Lets go🤘</button>
+                <br>
+                <br>
+            </div>
+            <div class="col-lg-2 col-md-2"></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 private-college" >
+                <img src="./images/private-college.jpg" class="college-img">
+                <h3><strong>Private Universities</strong></h3>
+                <hr class="no">
+                <br>
+                <p class="lead">
+                    Private universities overtakes Government universities on infrastructure and environment.
+                </p>
+                <p class="lead">
+                    Private universities fees is usually high as compared to that of Government universities.
+                </p>
+                <p class="lead">
+                    Some of the private universities are AICTE approved and some are not. Placement record of some universities
+                    are excellent while some are below expected.
+                </p>
+                <button class="btn btn-outline-primary" style="width:40%;" onclick="window.open('https://engineering.careers360.com/colleges/list-of-private-engineering-colleges-in-india','_blank');">Lets go🤘</button>
+            </div>
+            <div class="col-lg-1 col-md-1"></div>
+        </div>
+        <br><br><hr><br>
+        <div class="row college" id="med">
+            <h2 ><strong>Not interested in Engineering ? Let's see what else is there .🤔</strong></h2>
+            <h1 style="background-color:#F1EEE9;padding:80px;font-size: 50px;"><strong>Medical 💉</strong></h1>
+        </div>
+        <br>
+        <div class="row college">
+            <div class="col-lg-7 col-md-7 col-sm-12 college-coldata">
+                
+                <p class="lead">
+                    A career in medicine is one of the oldest and most respected professions; 
+                    it allows you the potential to impact human life in a way that is truly unique and the job 
+                    satisfaction you get is unparalleled. A field in which one needs to put others first, medicine 
+                    is truly a service and not just a profession. The hard work and countless hours one needs to 
+                    invest in studying medicine can come across as an arduous task, but the power to save lives is 
+                    well-worth the effort.
+                </p>
+                <p class="lead">
+                    This is a diverse and vast field where one never ceases to learn. The basic medical degree(MBBS) is 
+                    just the initial stage in gaining knowledge and competence for a future in medicine where you strive 
+                    for the common good.
+                </p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 college-colimg">
+                <img src="./images/medical.gif" style="height:400px;">
+            </div>
+        </div>
+        <br><br>
+        <div class="row college">
+            <h2><strong>What course to choose in Medical ?</strong></h2>
+        </div>
+        <div class="row college">
+            <div class="col-lg-7 col-md-7 col-sm-12 college-coldata">
+                <h3><strong>MBBS</strong></h3>
+                <p class="lead">
+                    An MBBS tops the list of medical courses in India after 12th as it is one of the most desired 
+                    UG programs among aspiring doctors. It is a 5-year and 6-month long Undergraduate degree that 
+                    covers a wide range of Clinical, Pre-clinical and Para-clinical subjects during the course. 
+                    Candidates with a background in science can appear for the national-level NEET exam after the 
+                    12th to get admission to MBBS colleges in India. The minimum age criteria for applicants is 17 years.
+                </p>
+                <p class="lead">
+                    The fee for MBBS in Government colleges ranges from INR 20,000 to INR 7.5Lakhs. 
+                    For private colleges, this may be INR 20Lakhs or more.
+                </p>
+                <button class="btn btn-outline-primary " style="margin:3%;" onclick="window.open('https://medicine.careers360.com/colleges/list-of-private-medical-colleges-in-india','_blank');">Private Colleges</button>
+                <button class="btn btn-outline-primary" style="margin:3%;" onclick="window.open('https://medicine.careers360.com/colleges/list-of-government-medical-colleges-in-india','_blank');">Government Colleges</button>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 college-colimg">
+                <img src="./images/mbbs.gif" style="height:400px; border-radius: 18px;">
+            </div>
+        </div>
+        <br><br><hr><br>
+        <div class="row college">
+            <div class="col-lg-5 col-md-5 col-sm-12 college-colimg">
+                <img src="./images/dentist.gif" style="height:400px; border-radius: 18px;margin-top: 8%;">
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 college-coldata">
+                <h3><strong>Bachelor of Dental Surgery</strong></h3>
+                <p class="lead">
+                    A BDS is a 5-year UG program that includes 4 years of classroom education and a year-long 
+                    compulsory rotating internship. It is the only professional dental course approved in India. 
+                    A Bachelor's degree in Dental Surgery is mandatory for students aspiring to work as dentists 
+                    at private or government hospitals. The degree primarily focuses on introducing the students 
+                    to and training them on dental surgeries and sciences. Like an MBBS, a BDS also requires candidates 
+                    to have turned 17 years and qualified with the three main Science subjects. Admission is done based 
+                    on NEET Cut-off.
+                </p>
+                <p class="lead">
+                    The average course fee ranges between INR 1Lakh and INR 6Lakhs.
+                </p>
+                <button class="btn btn-outline-primary " style="margin:3%;" onclick="window.open('https://medicine.careers360.com/colleges/list-of-medical-colleges-in-india?ownership=Private&degree=B.D.S.','_blank');">Private Colleges</button>
+                <button class="btn btn-outline-primary" style="margin:3%;" onclick="window.open('https://medicine.careers360.com/colleges/list-of-medical-colleges-in-india?ownership=Public/Government&degree=B.D.S.','_blank');">Government Colleges</button>
+            </div>
+        </div>
+        <br><br><hr><br>
+        <div class="row college">
+            <div class="col-lg-7 col-md-7 col-sm-12 college-coldata">
+                <h3><strong>Bsc Nursing</strong></h3>
+                <p class="lead">
+                    A Bachelor’s degree in Nursing is a 4-year program focusing on detailed knowledge in general 
+                    nursing, midwifery and professional training. It is one of the commonly pursued medical courses 
+                    after 12th without NEET. BSc Nursing admission is done through different state-level entrance 
+                    exams. One of the most important entrance exams is the WB JENPAS for candidates in West Bengal. 
+                    Candidates over age 17 and having 50% aggregate in Grade 12 are eligible for the entrance.
+                </p>
+                <p class="lead">
+                    The average annual course fee can range from INR 8,500 to INR 1.3Lakhs.
+                </p>
+                <button class="btn btn-outline-primary " style="margin:3%;" onclick="window.open('https://university.careers360.com/colleges/list-of-bsc-in-nursing-science-universities-in-india?ownership=Private&degree=B.Nurs','_blank');">Private Colleges</button>
+                <button class="btn btn-outline-primary" style="margin:3%;" onclick="window.open('https://university.careers360.com/colleges/list-of-bsc-in-nursing-science-universities-in-india?ownership=Public/Government&degree=B.Nurs','_blank');">Government Colleges</button>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 college-colimg">
+                <img src="./images/nursing.jpg" style="height:500px; border-radius: 18px;">
+            </div>
+        </div>
+        <br><br><hr><br>
+        <div class="row college">
+            <div class="col-lg-5 col-md-5 col-sm-12 college-colimg">
+                <img src="./images/pharmacy.jpg" style="height:450px; border-radius: 18px;margin-top: 8%;">
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 college-coldata">
+                <h3><strong>Bachelor in Pharmacy (B.pharm)</strong></h3>
+                <p class="lead">
+                    A 4-year BPharm course is the desired degree course for students who want to join the pharmaceutical 
+                    sector. Following this, students can practice as a Pharmacist or work in a Pharmaceutical company. 
+                    The eligibility criteria remain the same as for other courses, like MBBS, BDS, BAMS, BUMS and BHMS. 
+                    Various entrance exams are conducted at the state level for admission to BPharm courses. 
+                    The most common ones are AP EAMCET/AP EAPCET/EAMCET/WBJEE/MHT CET/OJEE/BITSAT/KCET/UPCET/GUCET/IPU CET.
+                </p>
+                <p class="lead">
+                    The average course fee is around 7 lakhs.
+                </p>
+                <button class="btn btn-outline-primary " style="margin:3%;" onclick="window.open('https://pharmacy.careers360.com/colleges/list-of-private-pharmacy-colleges-in-india','_blank');">Private Colleges</button>
+                <button class="btn btn-outline-primary" style="margin:3%;" onclick="window.open('https://pharmacy.careers360.com/colleges/list-of-government-pharmacy-colleges-in-india','_blank');">Government Colleges</button>
+            </div>
+        </div>
+        <div class="row college" id="def">
+            <h3><strong>Hmm.. Medical also is not an option.</strong></h3>
+            <h1 style="background-color:#F1EEE9;padding:80px;font-size: 50px;"><strong>Defence ⚔</strong></h1>
+        </div>
+        <div class="row college">
+            <div class="col-lg-7 col-md-7 college-coldata">
+                <h3><strong></strong></h3>
+                <p class="lead">
+                    The Ministry of Defence is charged with coordinating and supervising all agencies and functions of 
+                    the government relating directly to national security and the Indian Armed Forces. 
+                    The President of India is the ceremonial commander-in-chief of the armed forces of the country.
+                </p>
+                <p class="lead">
+                    The most famous examination for defence aspirants is NDA exam. NDA exam is conducted by UPSC twice 
+                    every year for selecting Young students to serve as an odiicer in the Indian Armed forces. The candidate can
+                    select either Army , Navy or Air Force as his choice according to his/her Entrance. NDA exam can be given 
+                    by both girls and boys. On clearing Exam Candidates have to appear for a 5 day interview process known as 
+                    SSB. On clearing SSb candidates have to clear medicals and then wait for final Merit List.
+                </p>
+                <p class="lead">
+                    Another Defence Entry at intermediate level is TGC. TGC calls Candidates directly for SSB Interview based 
+                    on the marks scored by Candidate in their class 12th. The selected students pursue Btech from Army College and later 
+                    trained at OTA Academy Gaya and then commisioned as Officer in the Indian army.
+                </p>
+                <button class="btn btn-outline-primary" style="margin:3%;"onclick="window.open('https://www.ssbcrack.com/2013/06/what-is-tgc-entry-for-indian-army.html','_blank');">Know more about TGC🔥</button>
+                <button class="btn btn-outline-primary" style="margin:3%;"onclick="window.open('https://www.ssbcrack.com/written-exams/nda-exam','_blank');">Know more about NDA🔥</button>
+            </div>
+            <div class="col-lg-5 col-md-5 college-colimg">
+                <img src="./images/defence.gif">
+            </div>
+        </div>
+        <div class="row college" id="oth">
+            <h1 style="background-color:#F1EEE9;padding:80px;font-size: 50px;"><strong>Bachelor’s Programs </strong></h1>
+        </div>
+        <div class="row college">
+            <div class="col-lg-7 col-md-7 college-coldata">
+                <h2><strong>BCA</strong></h2>
+                <p class="lead">
+                    BCA full form is Bachelor of Computer Application. BCA course is a 3-year UG course that imparts 
+                    knowledge on the basics of computer application and software development. BCA subjects include 
+                    database management systems, software engineering, operating systems, web technology and computer 
+                    languages such as HTML, C, C++, Java.
+                </p>
+                <p class="lead">
+                    BCA Course Fees ranges between INR 80,000 to INR 3,00,000 in private colleges and INR 20,000 to 
+                    INR 80,000 in Government colleges. Course Fees for BCA Colleges in Delhi range between INR 70,000 
+                    to INR 3,00,000.   
+                </p>
+                <button class="btn btn-outline-primary" onclick="window.open('https://it.careers360.com/colleges/list-of-bca-mca-colleges-in-india?ownership=Private&degree=B.C.A.','_blank');">Colleges🔎</button>
+            </div>
+            
+            <div class="col-lg-5 col-md-5 college-colimg">
+                <img src="./images/bca.jpg">
+            </div>
+        </div>
+        
+        <div class="row college">
+            <div class="col-lg-5 col-md-5 college-colimg">
+                <img src="./images/bsc.png" style="height:400px;width:400px; margin-top: 15%;">
+            </div>
+            <div class="col-lg-7 col-md-7 college-coldata">
+                <h2><strong>Bachelor in Science</strong></h2>
+                <p class="lead">
+                    BSc or Bachelor of Science is an undergraduate degree of three years duration which is universally 
+                    offered across institutes and universities across India. BSc is one of the most popular courses 
+                    opted by students who have a flair for scientific aptitude and zeal for research-oriented and 
+                    calculative approaches based on a proven systematic method. Science is all about experimentation, 
+                    research and discovery.
+                </p>
+                <p class="lead">
+                    A BSc degree is a culmination of both theoretical and practical ways of learning. 
+                    Pursuing a BSc degree also opens up multiple avenues for a student and he/she can either opt for 
+                    higher studies in Science or any other discipline which may be related or different from the 
+                    subjects studied during graduation.  
+                </p>
+                <button class="btn btn-outline-primary" onclick="window.open('https://university.careers360.com/colleges/list-of-bsc-universities-in-india?stream=Sciences','_blank');">Colleges🔎</button>
+            </div>
+        </div>
+        <div class="row college">
+            <div class="col-lg-7 col-md-7 college-coldata">
+                <h2><strong>Bachelor in Commerce</strong></h2>
+                <p class="lead">
+                    BCom or Bachelor of Commerce course is a three-year UG degree course recognised by the Universities 
+                    Grants Commission (UGC). Along with the full-time delivery mode, one can also pursue Distance BCom 
+                    or Online BCom course. BCom is one of the most popular courses amongst the Class 12 graduates with 
+                    the Commerce stream
+                </p>
+                <p class="lead">
+                    The three year BCom course is divided into six semesters. Students pursuing the course can choose 
+                    elective subjects of their choice in some semesters. Subjects taught during a BCom degree course 
+                    includes Financial Accounting, Business Laws, Economics, Taxation, Auditing, Cost Accounting, among 
+                    others. With a BCom degree, one get an option to start a career in related fields such as Finance,
+                    Accounting, Banking, Insurance, etc
+                </p>
+                <button class="btn btn-outline-primary" onclick="window.open('https://finance.careers360.com/colleges/list-of-bcom-colleges-in-india','_blank');">Colleges🔎</button>
+            </div>
+            <div class="col-lg-5 col-md-5 college-colimg">
+                <img src="./images/commerce.jpg" style="height:400px;width:400px; margin-top: 15%;">
+            </div>
+        </div>
+        <div class="row college">
+            <div class="col-lg-5 col-md-5 college-colimg">
+                <img src="./images/bba.png" style="height:400px;width:400px; margin-top: 15%;">
+            </div>
+            <div class="col-lg-7 col-md-7 college-coldata">
+                <h2><strong>Bachelor in Business Administration</strong></h2>
+                <p class="lead">
+                    BBA full form is Bachelor of Business Administration. BBA is one of the most popular and sought-after 
+                    bachelor's degree programmes pursued by students after Class 12. The BBA course is the gateway to a 
+                    plethora of job opportunities in numerous sectors such as Sales, Marketing, Education, Finance, 
+                    Sales, and Government to name a few. 
+                </p>
+                <p class="lead">
+                    BBA is a three-year professional undergraduate course in Business Management. It is open to 
+                    students from all three streams i.e., Science, Arts and Commerce. The BBA course offers knowledge 
+                    and training in management and leadership skills to prepare them for managerial roles and 
+                    entrepreneurship.
+                </p>
+                <button class="btn btn-outline-primary" onclick="window.open('https://bschool.careers360.com/colleges/list-of-bba-colleges-in-india','_blank');">Colleges🔎</button>
+            </div>
+        </div>
+        <br><br><hr><br>
+        <div class="row eleven">
+            <h2><strong>Still Confused ! Let the expert's help you now.😎</strong></h2>
+        </div>
+        <br><br><br>
+        <div class="row eleven">
+            <div class="col-lg-3 col-md-3  sale sale-one">
+                <img src="./images/career clarity service.jpg" class="eleven-saleimg">
+                <h3 style="line-height: 50px;"><strong>Career clarity service for students</strong></h3>
+                <hr class="no">
+                <ul style="list-style:none; text-align:left; margin-top:5%; ">
+                    <li class="lead"><i class="fa-solid fa-book-open"></i>&nbsp;&nbsp;&nbsp;Psychometric Test</li>
+                    <li class="lead"><i class="fa-solid fa-people-group"></i>&nbsp;&nbsp;&nbsp;1 - 4 Sessions</li>
+                    <li class="lead"><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;&nbsp;&nbsp;5,000 - 10,000</li>
+                </ul>
+                <button class="btn btn-primary" style="width: 90%;" onclick="window.open('https://pages.razorpay.com/pl_JDGQSRXDp9YQxE/view','_blank');">Buy Now</button>
+                <br><br>
+            </div>
+            
+            <div class="col-lg-1 col-md-1"></div>
+            
+            <div class="col-lg-3 col-md-3 sale">
+                <img src="./images/higher education india.jpg" class="eleven-saleimg">
+                <h3 style="line-height: 50px;"><strong>Higher Education in India</strong></h3>
+                <hr class="no">
+                <hr class="no">
+                <ul style="list-style:none; text-align:left; margin-top:5%; ">
+                    <li class="lead"><i class="fa-solid fa-book-open"></i>&nbsp;&nbsp;&nbsp;Psychometric Test</li>
+                    <li class="lead"><i class="fa-solid fa-people-group"></i>&nbsp;&nbsp;&nbsp;1 - 4 Sessions</li>
+                    <li class="lead"><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;&nbsp;&nbsp;5,000 - 25,000</li>
+                </ul>
+                <button class="btn btn-primary" style="width: 90%;" " onclick="window.open('https://pages.razorpay.com/pl_JHGnVe3jsDs88i/view','_blank');">Buy Now</button>
+                <br><br>
+            </div>
+            
+            <div class="col-lg-1 col-md-1"></div>
+            
+            <div class="col-lg-3 col-md-3 sale">
+                <img src="./images/higher education abroad.jpg" class="eleven-saleimg">
+                <h3 style="line-height: 50px;"><strong>Higher Education Abroad</strong></h3>
+                <hr class="no">
+                <hr class="no">
+                <ul style="list-style:none; text-align:left; margin-top:5%; ">
+                    <li class="lead"><i class="fa-solid fa-book-open"></i>&nbsp;&nbsp;&nbsp;Psychometric Test</li>
+                    <li class="lead"><i class="fa-solid fa-people-group"></i>&nbsp;&nbsp;&nbsp;1 - 4 Sessions</li>
+                    <li class="lead"><i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;&nbsp;&nbsp;5,000 - 25,000</li>
+                </ul>
+                <button class="btn btn-primary" style="width: 90%;" onclick="window.open('https://www.careerguide.com/career/abroad-studies','_blank');">Buy Now</button>
+                <br><br>
+            </div>
+            <div class="col-lg-1 col-md-1"></div>
+        </div>
+        <div class="social">
+            <ul class="social">
+                <li><a href="#eng"><i class="fa fa-duotone fa-screwdriver-wrench"></i></a></li>
+                <li><a href="#med"><i class="fa  fa-user-doctor"></i></a></li>
+                <li><a href="#def"><i class="fa fa-duotone fa-person-military-rifle"></i></a></li>
+                <li><a href="#oth"><i class="fa  fa-book"></i></a></li>
+            </ul>
+          </div>
+        <div class=" row footer">
+            <div class="col-sm-12 col-md-4">
+                <img src="./logo/Career launcher-logos_white.png">
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <p class="lead contact">Contact us: Shubham.godiyal2001@gmail.com</p>
+                <p class="lead">Mobile : +91 8859770347</p>
+                <p class="lead">Address: Badowala,Premnagar</p>
+                <p class="lead"> Dehradun, Uttarakhand</p>
+                <p class="lead">Pincode : 248007</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <p class="lead contact">© 2022 Career Launcher pvt.ltd. </p>
+                <p class="lead">All rights reserved.</p>
+        </div >
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
