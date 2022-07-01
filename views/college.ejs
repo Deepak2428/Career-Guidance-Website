@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +26,14 @@
             <%} else {%>
                 <li class="navright"><button class="dropbtn" onclick="dropdown()"><i class="fa fa-light fa-user"></i></button></li>
             <%}%>
+            <li class="navright"><a href="#footer">Contact Us</a></li>
             <li class="navright"><a href="index.ejs">Home</a></li>
         </ul>
     </div>
     <div id="dropdown" style="display: none;">
         <ul class="navlist">
             <li><%=username%></li>
+
             <li><a href="/logout">Logout</a></li>
         </ul>
     </div>
@@ -551,13 +554,62 @@
         </div>
         <div class="social">
             <ul class="social">
-                <li><a href="#eng"><i class="fa fa-duotone fa-screwdriver-wrench"></i></a></li>
-                <li><a href="#med"><i class="fa  fa-user-doctor"></i></a></li>
-                <li><a href="#def"><i class="fa fa-duotone fa-person-military-rifle"></i></a></li>
-                <li><a href="#oth"><i class="fa  fa-book"></i></a></li>
+                <li><a class="social"href="#eng"><i class="fa fa-duotone fa-screwdriver-wrench"></i></a></li>
+                <li><a class="social"href="#med"><i class="fa  fa-user-doctor"></i></a></li>
+                <li><a class="social"href="#def"><i class="fa fa-duotone fa-person-military-rifle"></i></a></li>
+                <li><a class="social"href="#oth"><i class="fa  fa-book"></i></a></li>
             </ul>
           </div>
-        <div class=" row footer">
+
+          <div class="row eleven">
+            <h2>Our Results !</h2>
+        </div>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="cont">
+                    <p class="lead">
+                        Career Launcher has helped me to discover my real interest and to find the college which will help to develop skills and become professional.I am pursuing Engineering.
+                    </p>
+                    <img src="./images/11.jpg">
+                    <h2>Aryan Bisht</h2>
+                    <h6 class="lead">IIT Delhi, BTECH CSE</h6>
+                </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="cont">
+                    <p class="lead">
+                        Earlier I was too confused regarding my career options. There were too many stream options and I didn't know how to evaluate betwen them and choose one. 
+                        In my first session, the counsellor helped me understand some of stream opportunities.
+                    </p>
+                    <img src="./images/img2.JPG">
+                    <h2>Vanshika</h2>
+                    <h6 class="lead">College of Technology, Pantnagar Btech IT</h6>
+                  </div>
+                
+              </div>
+              <div class="carousel-item">
+                <div class="cont">
+                    <p class="lead">
+                        Choosing stream for college was a confusing one but with career launcher I was able to discover my
+                        interest in my Science and based on the psychometric test opted for it. 
+                    </p>
+                    <img src="./images/img3.jpg">
+                    <h2>Shashwat Pandey</h2>
+                    <h6 class="lead">Graphic Era University, Dehradun , Bcom</h6>
+                  </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+    
+
+        <div id="footer"class=" row footer">
             <div class="col-sm-12 col-md-4">
                 <img src="./logo/Career launcher-logos_white.png">
             </div>
@@ -571,6 +623,13 @@
             <div class="col-sm-12 col-md-4">
                 <p class="lead contact">© 2022 Career Launcher pvt.ltd. </p>
                 <p class="lead">All rights reserved.</p>
+                <a href="https://www.instagram.com/shubham_24_28/" target="_blank" class="social" style="color:white;font-size: 30px;"><i class="fa-brands fa-instagram"></i></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="https://www.facebook.com/shubham.godiyal.3/" target="_blank" class="social" style="color:white;font-size: 30px;"><i class="fa-brands fa-facebook"></i></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="https://twitter.com/explore" target="_blank" class="social" style="color:white;font-size: 30px;"><i class="fa-brands fa-twitter"></i></a>
+                <br><br>
+                <h3 style="color:white;">Write To Us <a href="contactus.html"><i class="fa-solid fa-envelope"></i></a></h3>
         </div >
     </div>
     <script src="index.js"></script>

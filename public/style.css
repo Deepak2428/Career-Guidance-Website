@@ -454,13 +454,13 @@ ul.social li:hover
     display: inline-block;
 }
 
-.loginlogoimg input
+.loginlogoimg input,.contact input
 {
     border-top: 0;
     border-left: 0;
     border-right: 0;
 }
-.loginlogoimg input:focus
+.loginlogoimg input:focus,.contact input:focus
 {
    outline: none;
 }

@@ -5,6 +5,7 @@ const app=express();
 const mysql=require("mysql");
 const nodemailer=require("nodemailer");
 const session=require('express-session');
+const { dirname } = require("path");
 
 var signupstatus="";
 var signinstatus="";
@@ -42,6 +43,11 @@ app.get("/index.ejs",function(request,response)
 {
     console.log(request.session.email);
     response.render('index.ejs',{username:request.session.email});
+})
+
+app.get("/contactus.html",function(request,response)
+{
+    response.sendFile(__dirname+"/views/contactus.html");
 })
 
 
@@ -120,7 +126,7 @@ app.post("/forgotPass",function(req,res)
                 host: "smtp.gmail.com",
                 auth: {
                   user: 'shubham.godiyal2001@gmail.com',
-                  pass: 'Freestyle_f2k'
+                  pass: 'hwpzygzftliorzzc'
                 }
               });
               var mailOptions = {
@@ -151,12 +157,33 @@ app.post("/signup",function(request,response)
     var number=request.body.number;
     var regpassword=request.body.regpassword;
     var confirm_password=request.body.confirmpassword;
-
+    var checkNum="";
     if(regpassword!=confirm_password)
     {
             signupstatus="wrongPass";
             response.redirect("/login.ejs");
     }
+    if(number.length!=10)
+    {
+        signupstatus="wrongnumb";
+        response.redirect("/login.ejs");
+    }
+    console.log(number);
+    for(let i=0;i<number.length;i++)
+    {
+        if(number.charCodeAt(i)>=48&&number.charCodeAt(i)<=57)
+        {
+            continue;
+        }
+        else
+        {
+            signupstatus="wrongnumb";
+            checkNum="false";
+            break;
+        }
+    }
+    if(checkNum=="false")
+        response.redirect("/login.ejs");
 
     var con = mysql.createConnection({
         host: "localhost",
@@ -197,7 +224,35 @@ app.post("/signup",function(request,response)
 app.get("/logout",function(request,response)
 {
     request.session.destroy();
+    console.log(request.session);
     response.redirect("/index.ejs");
+})
+
+app.post("/send",function(request,response)
+{
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        host: "smtp.gmail.com",
+        auth: {
+          user: 'shubham.godiyal2001@gmail.com',
+          pass: 'hwpzygzftliorzzc'
+        }
+      });
+      var mailOptions = {
+        from: request.body.email,
+        to: 'shubham.godiyal2001@gmail.com',
+        subject: 'Contact',
+        text: 'Name : '+request.body.fname+" "+request.body.lname+"Message : "+request.body.message+"\n Mobile : "+request.body.numb
+      };
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
+
+      response.sendFile(__dirname+"/views/Hurray.html");
 })
 
 app.listen(3000,function()
