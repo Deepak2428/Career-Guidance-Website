@@ -1,4 +1,4 @@
-const express=require("express");
+const express=require("express");  
 const bodyParser=require("body-parser");
 const path=require('path');
 const app=express();
@@ -6,13 +6,21 @@ const mysql=require("mysql");
 const nodemailer=require("nodemailer");
 const session=require('express-session');
 const { dirname } = require("path");
+const cookieParser = require("cookie-parser");
 
 var signupstatus="";
 var signinstatus="";
 
 app.set("view engine","ejs");
 
-app.use(session({secret:'session'}));
+const oneDay = 1000 * 60 * 60 * 24;
+app.use(session({
+    secret: "theBookTown",
+    saveUninitialized:true,
+    cookie: { maxAge: oneDay },
+    resave: false
+})); 
+
 
 app.use(express.static('public'));
 
@@ -26,22 +34,37 @@ app.get("/",function(request,response)
 
 app.get("/11.ejs",function(request,response)
 {
-    response.render('11.ejs',{username:request.session.email});
+    if(!request.session)
+    {
+        response.redirect("/");
+    }
+    else
+    {
+        response.render('11.ejs',{username:request.session.email});
+    }
+    
 })
 
 app.get("/college.ejs",function(request,response)
 {
-    response.render('college.ejs',{username:request.session.email});
+    if(!request.session)
+    {
+        response.redirect("/");
+    }
+    else
+    {
+        response.render('college.ejs',{username:request.session.email});
+    }
+    
 })
 
 app.get("/login.ejs",function(request,response)
 {
-    response.render("login",{status:signupstatus,loginstatus:signinstatus});
+    response.render("login",{status:signupstatus,loginstatus:signinstatus});  
 })
 
 app.get("/index.ejs",function(request,response)
 {
-    console.log(request.session.email);
     response.render('index.ejs',{username:request.session.email});
 })
 
@@ -158,67 +181,75 @@ app.post("/signup",function(request,response)
     var regpassword=request.body.regpassword;
     var confirm_password=request.body.confirmpassword;
     var checkNum="";
+    var doable="true";
     if(regpassword!=confirm_password)
     {
+            doable="false";
             signupstatus="wrongPass";
             response.redirect("/login.ejs");
     }
     if(number.length!=10)
     {
+        doable="false";
         signupstatus="wrongnumb";
         response.redirect("/login.ejs");
     }
+
     console.log(number);
     for(let i=0;i<number.length;i++)
     {
-        if(number.charCodeAt(i)>=48&&number.charCodeAt(i)<=57)
+        if(number.charCodeAt(i)>=48 && number.charCodeAt(i)<=57)
         {
             continue;
         }
         else
         {
+            doable="false";
             signupstatus="wrongnumb";
-            checkNum="false";
+            response.redirect("/login.ejs");
             break;
         }
     }
-    if(checkNum=="false")
-        response.redirect("/login.ejs");
+        
 
-    var con = mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        password: "root",
-        database: "Carrer-guidance"
-      });
-    
-    con.connect(function(err) {
-    
-    if (err) throw err;
-    console.log("Connected!");
-    var sql="SELECT * FROM `sign_up` WHERE Email='"+email+"'";
-    con.query(sql,function(error,result,feild)
+    if(doable==="true")
     {
-        if(error)
-            throw error;
-        console.log(result);
-        if(result.length==1)
+        var con = mysql.createConnection({
+            host: "localhost",
+            user: "root",
+            password: "root",
+            database: "Carrer-guidance"
+          });
+        
+        con.connect(function(err) {
+        
+        if (err) throw err;
+        console.log("Connected!");
+        var sql="SELECT * FROM `sign_up` WHERE Email='"+email+"'";
+        con.query(sql,function(error,result,feild)
         {
-            signupstatus="alreadyexists";
-            response.redirect("/login.ejs");
-        }
-        else if(result.length==0)
-        {
-            signupstatus="success";
-            sql="INSERT INTO `sign_up` (`First_Name`, `Last_Name`, `Email`, `Contact`, `Password`, `Re-Password`) VALUES ('"+fname+"', '"+lname+"', '"+email+"', '"+number+"', '"+regpassword+"', '"+confirm_password+"');"
-            con.query(sql,function(error,result)
+            if(error)
+                throw error;
+            console.log(result);
+            if(result.length==1)
             {
-                if(error) throw error;
-            });
-            response.redirect("/login.ejs");
-        }
-    })
-    });
+                signupstatus="alreadyexists";
+                response.redirect("/login.ejs");
+            }
+            else if(result.length==0)
+            {
+                signupstatus="success";
+                sql="INSERT INTO `sign_up` (`First_Name`, `Last_Name`, `Email`, `Contact`, `Password`, `Re-Password`) VALUES ('"+fname+"', '"+lname+"', '"+email+"', '"+number+"', '"+regpassword+"', '"+confirm_password+"');"
+                con.query(sql,function(error,result)
+                {
+                    if(error) throw error;
+                });
+                response.redirect("/login.ejs");
+            }
+        })
+        });
+    }    
+    
 })
 
 app.get("/logout",function(request,response)

@@ -47,6 +47,10 @@ button{
 {
     margin:2px;
 }
+li.dropdown
+{
+    display: none;
+}
 .navlist img
 {
     height:70px;
@@ -106,6 +110,29 @@ button{
 {
     color: white;
     background-color: black;
+}
+.dropdown-list
+{
+    margin-top: 0%;
+    display: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.dropdown-list li
+{
+    padding: 15px;
+    font-size: 18px;
+}
+.dropdown-list li a
+{
+    color: white;
+    text-decoration: none;
+}
+.dropdown-list li a:hover
+{
+    color: blue;
+    transition: 0.6ms;
 }
 
 /************* row one  ************/
@@ -617,4 +644,52 @@ img.arts
 .private-college
 {
     padding-bottom: 10px;
+}
+
+@media(max-width:1058px) {
+
+    li.navright
+    {
+        display: none;
+    }
+    li.dropdown
+    {
+        display:block;
+        position: absolute;
+        top:4%;
+        right:5%;
+    }
+    li.dropdown button
+    {
+        background-color: black;
+    }
+}
+@media(max-width:690px) {
+    div
+    {
+        margin:auto;
+        text-align: center;
+    }    
+    h2,form
+    {
+        text-align: center;
+    }
+    a.signup
+    {
+        margin-left: 38%;
+    }
+    button.loginbtn
+    {
+        margin: auto;
+    }
+    div.sale 
+    {
+        margin-left: 20%;
+        margin-top: 6%;
+    }
+    textarea
+    {
+        width:60%;
+    }
+
 }

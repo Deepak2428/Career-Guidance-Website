@@ -18,3 +18,14 @@ function dropdown()
         div.style.display = 'block';
     }
 }
+
+function show()
+{
+    var div=document.getElementById("dropdown-list");
+    if(div.style.display!=='none'){
+        div.style.display = 'none';
+    }
+    else {
+        div.style.display = 'block';
+    }
+}

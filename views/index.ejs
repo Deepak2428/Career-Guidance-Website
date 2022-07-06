@@ -28,7 +28,22 @@
                 <li class="navright"><a href="#grad">College</a></li>
                 <li class="navright"><a href="#11/12">11-12th</a></li>
                 <li class="navright"><a href="#">Home</a></li>
+                <li class="dropdown"><button onclick="show()"><i style="color: white;" class="fa-solid fa-bars"></i></button></li>
             </ul>
+    </div> 
+    <div id="dropdown-list" class="dropdown-list" >
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>
+            <li><a href="#11/12">11-12th</li>
+            <li><a href="#grad">College</a></li>
+            <% if(username==undefined){%>
+                <li><a href="Login.ejs">Login/Sign Up</a></li>
+            <%} else {%>
+                <li ><%=username%></li>
+                <li><a href="/logout">Logout</a></li>
+            <%}%>
+            <li><a href="#footer">Contact US</a></li>
+        </ul>
     </div>
     <div id="dropdown" style="display: none;">
         <ul class="navlist">
@@ -37,7 +52,7 @@
         </ul>
     </div>
     <div class="row one">
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-10">
                     <h2>India's largest space where</h2>
                     <h1>Dreams meet destination 🙌</h1>
                     <h2 id="first"> We help you make informed choices
@@ -50,19 +65,19 @@
                                 <li class="lead">Refining your study abroad prospects ✈️</li>
                             </ul>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-10">
                 <center>
                     <img src="./images/career-counselling-for-students.webp">
                 </center>
             </div>  
     </div>
     <div class="row two">
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-10">
             <center>
                 <img src="./images/career-counselling2.webp">
             </center>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-10">
             <h1>Why one should need Career Guidance?🤔</h1><br>
             <p class="lead">Career guidance help students understand their strengths and weaknesses and then 
                 match them with their skills and interest so that they get the best suitable career choice.</p>
@@ -75,7 +90,7 @@
 
     <div class="row three">
         <div class="row">
-            <div class="col-sm-12 col-lg-12 col-md-12">
+            <div class="col-sm-10 col-lg-12 col-md-12">
                 <center>
                     <h1>How we will assist you in your</h1>
                     <h1><strong>Career Journey?</strong>🚀</h1>
@@ -87,7 +102,7 @@
                                     
 
     <div class="row four" id="11/12">
-        <div class="col-lg-6 col-md-6 col-sm-12 fourcoldata">
+        <div class="col-lg-6 col-md-6 col-sm-10 fourcoldata">
             <h3><Strong>Class 11th/12th</Strong> </h3>
             <p class="lead dull">Stream Selection</p>
             <p class="lead">Choosing the subjects in which you want to make career can be difficult sometimes.
@@ -100,7 +115,7 @@
             <%}%>
             
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 fourcol">
+        <div class="col-lg-6 col-md-6 col-sm-10 fourcol">
             <img src="./images/12th.png">
         </div>
     </div>
@@ -108,10 +123,10 @@
                                     <br>
                                     <hr>
     <div class="row five" id="grad">
-        <div class="col-lg-6 col-md-6 col-sm-12 fivecol">
+        <div class="col-lg-6 col-md-6 col-sm-10 fivecol">
             <img src="./images/college.png">
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 fivecoldata">
+        <div class="col-lg-6 col-md-6 col-sm-10 fivecoldata">
             <h3><Strong>College</Strong></h3>
             <p class="lead dull">College Admission</p>
             <p class="lead">Ready to leave School and start new a phase in your life.</p>
@@ -207,7 +222,7 @@
       <div class="row eight">
           <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-sm-12 col-md-3 science">
+            <div class="col-sm-10 col-md-3 science">
                 <h3><strong>Career in Science</strong></h3>
                 <ul class="science">
                     <li>Software Developer💻</li>
@@ -219,7 +234,7 @@
                 <button class="btn btn-outline-dark" onclick="window.open('https://www.youtube.com/watch?v=0flj256iOmc&ab_channel=upGrad','_blank');">Know more   <i class="fa-brands fa-youtube"></i></button>
             </div>
             <div class="col-md-2"></div>
-            <div class="col-sm-12 col-md-3 commerce">
+            <div class="col-sm-10 col-md-3 commerce">
                 <h3><strong>Career in Commerce</strong></h3>
                 <ul class="commerce">
                     <li>Chartered Accountant👨‍⚖️</li>
@@ -235,7 +250,7 @@
           </div>
           <div class="row" style="margin-top: 8%;">
               <div class="col-md-4"></div>
-            <div class="col-sm-12 col-md-4 arts">
+            <div class="col-sm-10 col-md-4 arts">
                 <h3><strong>Career in Arts</strong></h3>
                 <ul class="arts">
                     <li>Content Writer📄</li>
@@ -260,17 +275,17 @@
       </div>
       <div id="footer"class=" row footer">
 
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-10 col-md-4">
             <img src="./logo/Career launcher-logos_white.png">
         </div>
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-10 col-md-4">
             <p class="lead contact">Contact us: Shubham.godiyal2001@gmail.com</p>
             <p class="lead">Mobile : +91 8859770347</p>
             <p class="lead">Address: Badowala,Premnagar</p>
             <p class="lead"> Dehradun, Uttarakhand</p>
             <p class="lead">Pincode : 248007</p>
         </div>
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-10 col-md-4">
             <p class="lead contact">© 2022 Career Launcher pvt.ltd. </p>
             <p class="lead">All rights reserved.</p>
             <br>
