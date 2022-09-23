@@ -148,8 +148,8 @@ app.post("/forgotPass",function(req,res)
                 service: 'gmail',
                 host: "smtp.gmail.com",
                 auth: {
-                  user: 'shubham.godiyal2001@gmail.com',
-                  pass: 'hwpzygzftliorzzc'
+                  user: '',
+                  pass: ''
                 }
               });
               var mailOptions = {
